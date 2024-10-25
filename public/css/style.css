@@ -1,0 +1,11 @@
+@import url('variables.css');
+@import url('headers.css');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin:0px;
+  padding:0px;
+}

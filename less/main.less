@@ -1,0 +1,55 @@
+@primary-background-color: #943a3a;
+@primary-background-color-dark: darken(@primary-background-color, 20%);
+@primary-text-color: #fff;
+@secondary-background-color: #ffd59B;
+@secondary-background-color-dark: darken(@secondary-background-color, 20%);
+@secondary-text-color: #333;
+@default-padding: 1rem;
+@default-margin: 1rem;
+@no-margin: 0px;
+@default-gap: 0.5rem;
+
+@breakResolutions: {
+    tablet: 720px;
+    desktop: 1025px;
+    widescreen: 1300px;
+    ultrawide: 2000px;
+};
+
+@breakPrefix: {
+    mobile: sm-;
+    tablet: md-;
+    desktop: lg-;
+    widescreen: xl-;
+    ultrawide: xxl-;
+}
+
+.default_button {
+    text-decoration: none;
+    padding:0.8rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @primary-background-color;
+    color:@primary-text-color;
+    box-shadow: 1px 1px 3px @primary-background-color-dark;
+};
+
+@import 'header.less';
+@import 'hero.less';
+@import 'components.less';
+@import 'grid.less';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+main .container {
+    padding:1rem;
+}
+

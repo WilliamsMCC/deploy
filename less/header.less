@@ -1,0 +1,54 @@
+header {
+    background-color: @primary-background-color;
+    color: @primary-text-color;
+    box-shadow: 0x 3px 5px @primary-background-color-dark;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            img {
+                border-radius: 50%;
+                box-shadow: 1px 1px 5px @primary-background-color-dark;
+            }
+
+            h1 {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
+                margin: 0px;
+                padding: 0px;
+
+                li a {
+                    text-decoration: none;
+                    color: @primary-text-color;
+                    display: inline-block;
+                    padding: 0.75rem 0.8rem;
+                    transition: background-color 1s ease;
+
+                    &:hover {
+                        background-color: @secondary-background-color;
+                        color: @secondary-text-color;
+                    }
+                }
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+    }
+
+}

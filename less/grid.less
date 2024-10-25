@@ -1,0 +1,39 @@
+.generarGrilla(@prefijo, @columnas, @iteracion : 1) when (@iteracion =< @columnas) {
+    @selector-columna: ~'.col-@{prefijo}@{iteracion}';
+    @selector-offset: ~'.offset-@{prefijo}@{iteracion}';
+    @ancho-base: (100% / @columnas * @iteracion);
+    @{selector-columna} {
+        flex: 0 0 @ancho-base;
+    }
+    @{selector-offset} {
+        margin-left: @ancho-base;
+    }
+    .generarGrilla(@prefijo, @columnas, (@iteracion + 1));
+}
+
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    .row {
+        display: flex;
+        flex: 1 100%;
+        flex-wrap: wrap;
+        [class*="col-"] {
+            border:1px solid #333;
+        }
+        .generarGrilla('', 6);
+        @media (min-width: @breakResolutions[tablet]) {
+            .generarGrilla(@breakPrefix[tablet], 12);
+        }
+        @media (min-width: @breakResolutions[desktop]) {
+            .generarGrilla(@breakPrefix[desktop], 12);
+        }
+        @media (min-width: @breakResolutions[widescreen]) {
+            .generarGrilla(@breakPrefix[widescreen], 12);
+        }
+        @media (min-width: @breakResolutions[ultrawide]) {
+            .generarGrilla(@breakPrefix[ultrawide], 12);
+        }
+    }
+}

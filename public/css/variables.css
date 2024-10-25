@@ -1,0 +1,13 @@
+:root {
+    --primary-background-color: #943a3a;
+    /*#588157;*/
+    --primary-background-color-dark: #451414;
+    --primary-text-color: #fff;
+    --secondary-background-color: #ffd59B;
+    --secondary-text-color: #333;
+
+    --default-padding: 1rem;
+    --default-margin: 1rem;
+    --no-margin: 0px;
+    --default-gap: 0.5rem;
+}

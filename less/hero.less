@@ -1,0 +1,45 @@
+.hero {
+    width:100vw;
+    height: 80vh;
+    overflow: auto;
+    position: relative;
+    img{
+        width:100vw;
+        height: 80vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+    .container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 75%;
+        left: 75%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: fadeout(@secondary-background-color, 30%);
+        padding: @default-padding;
+        border-radius: 17px;
+        box-shadow: 1px 1px 5px @secondary-background-color-dark;
+        h2 {
+            margin: @no-margin;
+        }
+        p {
+            line-height: 1.5;
+            font-size: 1.2rem;
+        }
+        a {
+            align-self: center;
+            display: inline-block;
+            padding: @default-padding;
+            border-radius: 37px;
+            background-color: @primary-background-color-dark;
+            color: @primary-text-color;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 1s ease;
+            &:hover {
+                background-color: lighten(@primary-background-color-dark, 50%);
+            }
+        }
+    }
+}

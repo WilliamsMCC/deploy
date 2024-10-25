@@ -1,0 +1,53 @@
+header {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    box-shadow: 0x 3px 5px var(--primary-background-color-dark);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+header .container .branding img {
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #000;
+}
+
+header .container .branding h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+header .container nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+header .container nav ul li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    display: inline-block;
+    padding: 0.75rem 0.8rem;
+    transition: background-color 1s ease;
+}
+
+header .container nav ul li a :hover {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+}
+
+header .container nav .hamburger {
+    display: none;
+}
+
+header .container .branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
