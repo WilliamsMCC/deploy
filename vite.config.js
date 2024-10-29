@@ -23,7 +23,7 @@ const getHtmlEntries = ()=>{
 export default defineConfig(
     {
         appType: 'mpa',
-        base: "/pw2-202403-vite/",
+        base: "/pw2-202403-vite-main/",
         build: {
             rollupOptions: {
                 input: getHtmlEntries()
